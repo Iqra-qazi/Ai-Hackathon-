@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Saylani Campus Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .event-featured-card {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://media.istockphoto.com/id/1193475383/vector/people-cleaning-a-city-park-together-and-collecting-waste.jpg?s=612x612&w=0&k=20&c=yxN2t99QRnz_BsWL2gbI_P1iDarDiTRoySNYWiuAuzo=');
+            /* Park Image */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            border-radius: 15px;
+            position: relative;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .event-card-img {
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .event-card {
+            border-radius: 15px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white border-end" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <img src="https://lms.saylanimit.com/logo.png" alt="Saylani" width="100">
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="dashboard.html"
+                    class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                </a>
+                <a href="report.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-box-open me-2"></i>Lost & Found
+                </a>
+                <a href="complaint.html"
+                    class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-file-alt me-2"></i>Complaints
+                </a>
+                <a href="admin_dashboard.html"
+                    class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-users me-2"></i>Volunteers
+                </a>
+                <a href="notification.html"
+                    class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fas fa-bell me-2"></i>Notifications
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <div
+                        class="icon-square bg-success text-white me-2 d-flex align-items-center justify-content-center rounded p-2">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h2 class="fs-4 m-0 fw-bold">Events Registration</h2>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <!-- Featured Event -->
+                        <div class="card border-0 mb-4 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-0">
+                                <div class="event-featured-card">
+                                    <h2 class="fw-bold mb-2">Community Cleanup</h2>
+                                    <p class="fs-5 mb-3">Saturday, 28th June</p>
+                                    <button class="btn btn-light px-4 py-2 fw-bold text-dark">City Park</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Events -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="card event-card h-100">
+                                    <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                        class="event-card-img w-100" alt="Tech Workshop">
+                                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                        <div>
+                                            <h5 class="fw-bold card-title">Tech Workshop</h5>
+                                            <p class="text-muted small mb-0">Learn basic repair skills.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-end mt-3">
+                                            <span class="fw-bold text-secondary">June 5</span>
+                                            <button class="btn btn-success px-4 text-white fw-bold">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card event-card h-100">
+                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                        class="event-card-img w-100" alt="Health Camp">
+                                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                        <div>
+                                            <h5 class="fw-bold card-title">Health Camp</h5>
+                                            <p class="text-muted small mb-0">Free checkups for students.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-end mt-3">
+                                            <span class="fw-bold text-secondary">July 5</span>
+                                            <button class="btn btn-success px-4 text-white fw-bold">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
